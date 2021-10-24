@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);
+    
+}
+
+.wrapper{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    max-height: 700px;
+    height: 100%;
+
+    width: 700px;
+    background: Snow;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.wrapper header{
+    text-align: center;
+    font-size: 30px;
+    font-weight:1000;
+    
+}
+
+.wrapper .inputField{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input {
+    width: 90%;
+    height: 100%;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: 3px solid DimGrey;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+.inputField input:focus {
+    border: 3px solid LightGray;
+}
+
+.inputField button {
+    background-color: DodgerBlue;
+    color: white;
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 100%;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px ;
+    transition: 0.5s;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+    background-color: rgb(19, 125, 190);
+    transform: translateY(2px);
+}
+.inputField button:active {
+    background-color: blue;
+    color: black;
+    transform: translateY(2px);
+}
+.inputField button:hover {   
+    background-color: RoyalBlue;
+}
+
+.wrapper .todo-list{
+    list-style: none;
+    height: 45px;
+}
+
+.wrapper .todo-list { 
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+    overflow: auto;
+    min-height: 400px;
+}
+
+.todo-list li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    background: LightGray;
+    position: relative;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todo-list li span {
+    color: white;
+    display: inline-flex;
+    float: right;
+    cursor: pointer;
+    transition: 0.2s;
+    right: -90px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.todo-list li:hover span{
+    right: 0px;
+}
+
+.todo-list li span .fa-edit, .fa-trash{
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    transition: 0.2s; 
+}
+
+.todo-list li span .fa-edit{
+    background:LightSlateGrey;
+}
+
+.todo-list li span .fa-trash{
+    background:Crimson;
+    border-radius: 0 3px 3px 0;
+    
+}
+
+.todo-list li span .fa-trash:hover{
+    background: LightSalmon;
+    color: DimGray;
+}
+
+.todo-list li span .fa-edit:hover{
+    background: LightCyan;
+    color: DimGray;
+}
+
+.todo-list li span .fa-trash:active {
+    background-color: BurlyWood;
+    color: black;
+    transform: translateY(2px);
+}
+
+.todo-list li span .fa-edit:active {
+    background-color: BurlyWood;
+    color: black;
+    transform: translateY(2px);
+}
+
+.wrapper .footer{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+}
+
+.footer button{
+    width: 130px;
+    padding: 10px;
+    height: 100%;
+    font-weight: 700;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background: #8E49E8;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.footer button:hover{
+    background: Indigo;
+}
+
+.footer button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.footer button:active {
+    background-color: MediumSlateBlue;
+    color: black;
+    transform: translateY(2px);
+}
+
+.wrapper .edit{
+    display: none;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+    transition: 0.2s;
+}
+
+.wrapper .edit.active{
+    display: flex;
+}
+
+.edit input {
+    width: 85%;
+    height: 100%;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: 3px solid DimGrey;
+    border-radius: 3px 0px 0px 3px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+  
+.edit input:focus {
+    border: 3px solid LightGray;
+}
+
+.edit span .fa-save, .fa-close{
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    transition: 0.2s;
+    color: white;   
+}
+
+.edit span .fa-save{
+    background:LightSeaGreen;
+}
+
+.edit span .fa-close{
+    background:Crimson;
+    border-radius: 0 3px 3px 0;  
+    margin-left: -5px; 
+}
+
+.edit span .fa-close:hover{
+    background: #E74C3C;
+    color: black;
+}
+
+.edit span .fa-save:hover{
+    background: LightGreen ;
+    color: DimGray;
+}
+
+.edit span .fa-close:active {
+    background-color: red;
+    color: black;
+    transform: translateY(2px);
+}
+
+.edit span .fa-save:active {
+    background-color: greenyellow;
+    color: black;
+    transform: translateY(2px);
+}

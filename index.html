@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>TODO LIST</header>
+
+        <div class="inputField">
+            <input type="text" placeholder="Adicionar novo item à lista">
+            <button><i class="fa fa-plus"></i></button>
+        </div>
+        <ul class="todo-list">
+            <!--AQUI ONDE FICA OS VALORES INSERIDOS PELO JS-->
+        </ul>
+
+        <div class="edit">
+            <input type="text" placeholder="Editar Item">
+            <span>
+                <i id="salvar" onclick="" class="fa fa-save"></i>
+                <i id="cancelar" onclick="cancelaAlteracao()" class="fa fa-close"></i>
+            </span>
+        </div>
+
+        <div class="footer">
+            <span> Você tem <span class="quantidade-itens"></span> itens</span>
+            <button>Deletar todos</button>
+        </div>
+    </div>
+</body>
+<script src="./src/js/todo.js"></script>
+<link rel="stylesheet" type="text/css" href="src/css/index.css" media="screen" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</html>
